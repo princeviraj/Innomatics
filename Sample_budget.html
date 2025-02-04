@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Budget Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        
+        * {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+        }
+
+        #header {
+            background: #00adb5;
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        h1, h2 {
+            font-weight: 600;
+        }
+
+        .form-container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            width: 50%;
+            margin: 20px auto;
+        }
+
+        
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 2px solid #00adb5;
+            border-radius: 5px;
+            font-size: 16px;
+            outline: none;
+        }
+
+        input[type="radio"] {
+            width: auto;
+            margin-right: 5px;
+        }
+
+        
+        button {
+            margin-top: 15px;
+            background-color: #00adb5;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background-color: #007b7f;
+        }
+
+    
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background: #00adb5;
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background: #f9f9f9;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 14px;
+            color: #555;
+        }
+
+        
+        .delete-btn {
+            background: red;
+            color: white;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .delete-btn:hover {
+            background: darkred;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="header">
+        <h1>Personal Budget Tracker</h1>
+        <h4>Manage your income and expenses easily!</h4>
+    </div>
+
+    <div class="form-container">
+        <h2>Add New Income or Expense</h2>
+        <label for="category">Category:</label>
+        <select id="category">
+            <option>--Select option--</option>
+            <option>Food</option>
+            <option>Transport</option>
+            <option>Entertainment</option>
+            <option>Rent</option>
+            <option>Grocery</option>
+        </select>
+
+        <label for="amount">Amount:</label>
+        <input type="text" id="amount" placeholder="Enter amount">
+
+        <label for="desc">Description:</label>
+        <input type="text" id="desc" placeholder="Enter description">
+
+        <label for="date">Date:</label>
+        <input type="date" id="date">
+
+        <label>Type:</label>
+        <input type="radio" name="type" value="Income"> Income
+        <input type="radio" name="type" value="Expense"> Expense
+
+        <button type="button" onClick="submitbody(event)">Add Entry</button>
+    </div>
+
+    <h2>Budget Summary</h2>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>Category</th>
+                <th>Amount</th>
+                <th>Description</th>
+                <th>Date</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody id="body"></tbody>
+    </table>
+
+    <footer>
+        <p>&copy; 2024 Personal Budget Tracker | Version 1.0</p>
+    </footer>
+    <script src="Budget_tracker.js"></script>
+</body>
+</html>
