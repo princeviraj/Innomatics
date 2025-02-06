@@ -1,0 +1,164 @@
+header{
+    background-image: url(C:/Users/swara/Downloads/Innomatics/25-days-Internship/Coffee/vecteezy_cup-of-coffee-espresso-beans-web-banner-with-copy-space_26466922.jpg);
+    width:100%;
+    height:100vh;
+    background-size: cover;
+    margin:0;
+    padding:0;
+    position:relative;
+    top:0;
+    box-sizing:content-box;
+    
+   
+    
+    
+}
+
+
+
+.image-content{
+    align-items: center;
+    text-align: center;
+    position: relative;
+    top:30%;
+    font-family: 'Poppins', sans-serif;
+    font-size: larger;
+    
+}
+.header{
+    display:flex;
+    justify-content: space-between;
+    color:#ffffff;
+}
+header::before,.header {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    
+    background: rgba(0, 0, 0, 0.4);
+    border-end-end-radius: 10px;
+    position:fixed;
+    top:0;
+}
+body,html{
+    padding:0;
+    margin:0;
+    height:100%;
+    
+}
+ul,li{
+    list-style: none;
+    display: inline-block;
+    align-items: center;
+    position:relative;
+    top:3.5px;
+}
+li{
+    margin-right:30px;
+    gap:20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    margin-top:5px;
+}
+.header-content{
+    display:flex;
+    justify-content: flex-end;
+}
+#soft{
+    margin-top:50px;
+    margin-bottom:25px;
+    text-align: center;
+}
+#menu{
+    display:flex;
+    justify-content:space-around;
+    margin-left:30px;
+    
+    gap:20px;
+    
+    
+}
+.specific-img:hover{
+    transform: scale(1.05);
+    box-shadow: 10px 10px 20px rgba(0.5, 0, 0, 0.5);
+}
+
+.images{
+    
+    width:300px;
+    height:400px;
+}
+.specific-img{
+    border: 3px inset rgb(38, 187, 170); 
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+#story{
+    background-color: aliceblue;
+    display:flex;
+    justify-content: space-around;
+    gap:30px;
+    margin-top:40px;
+}
+.franchise{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    
+}
+.fran-img img{
+    border-radius: 10px;
+    height:75%;
+    margin-top: 60px;
+    
+
+}
+.button-tag{
+    text-decoration: none;
+}
+.navbar{
+    text-decoration: none;
+}
+.image-content button{
+    border-radius: 50px;
+    background-image: linear-gradient(orange, red);
+    padding:30px 50px;
+    border:3px solid black;
+
+}
+.image-content button:hover{
+    transform :scale(1.03);
+}
+.fran-img img:hover{
+    transform: scale(1.02);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5);
+}
+#contact{
+    display: flex;
+    justify-content: space-around;
+    gap:0px;
+
+}
+.location{
+    margin-left:150px !important;
+    margin-top:20px !important;
+}
+.message input{
+    margin-bottom:20px;
+    width:500px;
+    height:50px;
+    border-radius: 10px;
+    border:2px solid skyblue
+}
+.footer{
+    background-color: chocolate;
+    padding-top: 40px;
+    margin-top:50px;
+    margin-bottom:0px;
+    text-align: center;
+}
+
+
