@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Problem_solving</title>
+    <link href="problem_solving.css" rel="stylesheet"></link>
+</head>
+<body style="text-align: center;">
+    <form id="form1">
+        <h2>1. Simple ATM Withdrawl System</h2>
+        <label for="amount" style="margin-top:10px;">Enter your Amount :</label>
+        <input type="text" placeholder="Enter amount...." id="amount"/><br>
+        <label for="pin" margin-top:10px;">Enter your Withdrwal pin :</label>
+        <input type="text" placeholder="Enter your pin...." id="pin"/><br>
+        <button type="submit" onclick="withdraw(event)" id="button1"> Click For Withdraw</button>
+    </form>
+    <form id="form2">
+        <h2>2. Online Shopping Discount</h2>
+        <p>Total amount post Discount : Rs.<span class="dis">0</span></p>
+        <label>Enter Billing Amount :</label>
+        <input type="text" placeholder="Enter bill amount" id="amount2"/><br>
+        <button onclick="discount(event)">Check for Discount</button>
+    </form>
+    <form>
+        <h2>3. Student Grading System with Extra credit</h2>
+        <p>Total Grade : "<span class="tot"></span>"</p>
+        <label for="marks">Enter your Marks :</label>
+        <input id="marks" type="text" placeholder="Enter marks"/><br>
+        <label for="att">Enter your Attendence :</label>
+        <input id="att" type="text" placeholder="Enter your attendence"/><br>
+        <button class="grade" onclick="cal_grade(event)">Calculate Grade</button>
+    </form>
+    <div id="traffic">
+    <h1>4. Smart Traffic Light System</h1>
+    <label for="traffic-density">Select Traffic Density:</label>
+    <select id="traffic-density">
+        <option>--Select option--</option>
+        <option value="Heavy">Heavy Traffic</option>
+        <option value="Moderate">Moderate Traffic</option>
+        <option value="Light">Light Traffic</option>
+    </select>
+    <button onclick="startTrafficLight(event)">Start</button>
+    
+    <div class="traffic-light">
+        <div id="green-light" class="light"></div>
+    </div>
+    </div>
+    <p id="time-display"></p>
+    <form>
+        <h2>5. Movie Ticket pricing</h2>
+        <label for="type"> Enter type of ticket you want :</label>
+        <select id="select">
+            <option value="">--Select option--</option>
+            <option value="general">General Ticket</option>
+            <option value="Matinee">Matniee Show(Before 5 PM)</option>
+            <option value="senior">Senior citizens</option>
+            <option value="child">children(below 12)</option>
+        </select>
+        <button onclick="TicketPrice(event)">Click for avail discount</button>
+        <p>Ticket Price after discount : $<span id="movie">0</span></p>
+    </form>
+    <form>
+        <h2>6. Job Application Filter</h2>
+        <label for="age">Enter age :</label>
+        <input id="age" type="text" min="21" max="55"/>
+        <label for="exp">Experience</label>
+        <input id="exp" type="number" min="2"/>
+        <lable id="degree">select an option :</lable>
+        <input type="radio" name="degree_batch"id="degree" value="degree"/>Bachelor degree
+        <input type="radio" name="degree_batch" id="degree_other" value="other"/>Other
+        <button type="submit" onclick="isEligibleForJob(event)">Submit</button>
+        <p id="ip">Eligibility :<span id="YN"></span></p>
+    </form>
+    <div class="container">
+        <h2>7. Coupon Redemption</h2>
+        <label for="orderAmount">Order Amount ($):</label>
+        <input type="number" id="orderAmount" placeholder="Enter order amount">
+
+        <label for="couponCode">Enter Coupon Code:</label>
+        <input type="text" id="couponCode" placeholder="DISCOUNT10 / FREESHIP">
+
+        <button onclick="applyCoupon(event)">Apply Coupon</button>
+
+        <h3 id="finalPrice">Final Price: $0.00</h3>
+        <p id="message"></p>
+    </div>
+    <div>
+        <h2> 8. Fiteness Membership Plan</h2>
+        <label for="basic">Basic</label>
+        <input type="radio" name="gym" id="basic" value="basic" onchange="choosePlan(event)"/>
+        <label for="premium">Premium</label>
+        <input type="radio" name="gym" id="premium" value="premium" onchange="choosePlan(event)"/>
+        <label for="vip">VIP</label>
+        <input type="radio" name="gym" id="vip" value="VIP" onchange="choosePlan(event)"/>
+        <p>Membership per month: $<span id="gym_amount">0</span></p>
+    </div>
+    <div>
+        <h2>9. Electricity Bill</h2>
+        <label for="bill">Enter bill amount :</label>
+        <input type="number" placeholder="enter your bill" id="bill_amount"/>
+        <button type="submit" onclick="calculateElectricityBill(event)">Submit</button>
+        <p>Your Bill :<span id="bill_cal">0</span></p>
+    </div>
+    <div class="container">
+        <h2>10. Flight Ticket Booking</h2>
+        
+        <label for="classType">Select Class:</label>
+        <select id="classType">
+            <option value="economy">Economy</option>
+            <option value="business">Business</option>
+            <option value="first">First Class</option>
+        </select>
+
+        <label for="luggageWeight">Enter Luggage Weight (kg):</label>
+        <input type="number" id="luggageWeight" min="0" placeholder="Enter weight">
+
+        <label><input type="checkbox" id="isStudent"> Student (15% Off)</label>
+        <label><input type="checkbox" id="isSenior"> Senior (10% Off)</label>
+
+        <button onclick="calculateAndDisplayFare()">Calculate Fare</button>
+
+        <h3>Final Ticket Price: $<span id="finalFare">0.00</span></h3>
+    </div>
+
+    
+    <script src="problem_solving.js"></script>
+</body>
+</html>
